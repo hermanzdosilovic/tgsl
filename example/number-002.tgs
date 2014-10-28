@@ -1,0 +1,26 @@
+# +--------------------------------------------------------------------------+ #
+# | NUMBER - SETS/RANGES 2                                                   | #
+# +--------------------------------------------------------------------------+ #
+
+num = :Number {
+  value = 10..20
+}
+
+# When you specify some number like this. It means that you want some 'long'
+# type number from set [10, 20]. That means that you can get some of these
+# values: 10, 11, 12, 13, 14, 15 16, 17, 18, 19, 20.
+
+# But you can also specify set of decimal numbers
+
+dec = :Number {
+  value = 10..20 decimal
+}
+# Keyword 'decimal' specifies that number 'dec' will be of 'double' type.
+# Values for this number are in range [10, 20] i.e [10.0, 20.0].
+# So, it is possible to get numbers like 5.34567, or 3.14159 etc. But it is not
+# possible to get number 20.78 or 0.99
+
+my_dec = :Number {
+  value = 20...30 decimal
+}
+# This set represents range [20, 30> i.e. [20, 29]. So you cannot get 29.56 etc.

@@ -1,0 +1,5 @@
+# This is a comment.
+# Every line that starts with a '#' will be considered as a comment.
+# Inside a comment you can write whatever you want.
+# When executing .tgs file comments will be ignored.
+      # Comments can be indented.

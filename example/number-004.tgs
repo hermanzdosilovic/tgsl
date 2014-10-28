@@ -1,0 +1,37 @@
+# +--------------------------------------------------------------------------+ #
+# | NUMBER - ARITHMETIC OPERATIONS                                           | #
+# +--------------------------------------------------------------------------+ #
+
+a = :Number {
+  value = 30..40
+}
+
+b = :Number {
+  value = 50...100
+}
+
+c = :Number {
+  value = a + b
+}
+
+# Because a and b are both numbers, for example: a = 35, b = 99. c will be
+# c = 35 + 99 = 134
+
+# You can do the same thing with other operations:
+# + - addition
+# - - subtraction
+# * - multiplication
+# / - division
+# % - modul
+# ^ - potentiation
+
+# Using parentheses is allowed.
+d = :Number {
+  value = 3 + 4 * (a - b) ^ 2 - 1
+}
+
+# If a = 30, b = 50 then d = 3 + 4*(30 - 50)^2 - 1 = 3 + 4*(-20)^2 - 1 =
+# = 3 + 4*400 - 1 = 3 + 1600 - 1 = 1603 - 1 = 1602
+
+# Parentheses, potentiation, multiplication, division, modul, addition,
+# subtraction

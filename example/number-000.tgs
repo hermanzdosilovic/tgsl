@@ -1,0 +1,30 @@
+# +--------------------------------------------------------------------------+ #
+# | NUMBER - BASICS                                                          | #
+# +--------------------------------------------------------------------------+ #
+
+# We can create number named 'my_number' whose value is 5
+my_number = :Number {
+  value = 5
+}
+# We say that 'my_number' is an object of class ':Number'
+# Also, we say that 'value' is a property of object 'my_number', and 'value'
+# equals to 5
+
+# We can create another number 'another_num' whose value is 0.3356
+another_num = :Number {
+  value = 0.3356
+}
+
+# In both of these cases we explicity specified a value of number.
+# And that value will always be the same, every time.
+
+# Biggest whole number that you can create is: 2**63 - 1
+# Smallest whole number that you can create is: -2**63
+# I.e. when working with whole numbers you are working with Java equivalent
+# primitive data type 'long'.
+#
+# When you are using decimal numbers, like 'another_num' you are working with
+# Java equivalent primitive data type 'double'.
+#
+# For more information about types that you use in number visit:
+# docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html

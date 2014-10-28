@@ -1,0 +1,52 @@
+# +--------------------------------------------------------------------------+ #
+# | NUMBER - SETS/RANGES                                                     | #
+# +--------------------------------------------------------------------------+ #
+
+# We can set value of a number to some range. Doing it so, every time we run the
+# script we will get different values for that number. But that value will be
+# from specified set.
+a = :Number {
+  # [1, 20]
+  value = 1..20
+}
+
+b = :Number {
+  # [1, 20> i.e. [1, 19]
+  value = 1...20
+}
+
+# We can specifiy union of two sets
+c = :Number {
+  # [1, 20] ∪ [30, 40]
+  value = 1..20 30..40
+}
+
+d = :Number {
+  # [0, 50> ∪ [100, 200]
+  value = 100..200 0...50
+}
+
+# In general if you specify value of number like this: x..y or x...y where x and
+# y are whole values i.e. 'long' type (Java equivalent), for that range we say
+# that x is 'left bound' and y is 'right bound'.
+
+# We can also specify intersection of two sets
+e = :Number {
+  # [1, 20] ∩ [10, 30]
+  value = 1..20 !10..30
+}
+# '!' indicates intersection between set [1, 20] and [10, 30].
+# No space between '!' and left bound of range.
+
+# IMPORTANT NOTES:
+#
+# You can specify range in two ways:
+#     * 1..20
+#     * 20..1
+# both of these represent same set [1, 20]
+#
+#
+# But:
+#     * 1...20
+#     * 20...1
+# First one represents set [1, 20>, while second one represents set <1, 20]
